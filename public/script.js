@@ -1,7 +1,8 @@
 
-//window.onload = function(){ 
-//    getLocation() 
-//};
+window.onload = function(){ 
+   getLocation() 
+   window.alert('THE CURRENT WEATHER SHOWS YOUR CURRENT LOCATION, YOU CAN SEARCH FOR ANOTHER CITITES IN THE SEARCH BOX')
+};
 async function getCityData(cityname)
 {
     console.log('fetching')
