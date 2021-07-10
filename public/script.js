@@ -1,8 +1,6 @@
 
-window.onload = function(){ 
-   getLocation() 
-   window.alert('THE CURRENT WEATHER SHOWS YOUR CURRENT LOCATION, YOU CAN SEARCH FOR ANOTHER CITITES IN THE SEARCH BOX')
-};
+getLocation() 
+window.alert('THE CURRENT WEATHER SHOWS YOUR CURRENT LOCATION, YOU CAN SEARCH FOR ANOTHER CITITES IN THE SEARCH BOX')
 async function getCityData(cityname)
 {
     console.log('fetching')
@@ -66,9 +64,9 @@ function UpdateUI(data)
 function showTime(time_zone){
     let d = new Date(new Date().toLocaleString("en-US", {timeZone: time_zone}));   
     console.log(d)
-    var h = d.getHours(); 
-    var m = d.getMinutes(); 
-    var s = d.getSeconds(); 
+    var h = d.getHours() 
+    var m = d.getMinutes() 
+    var s = d.getSeconds()
     var session = "AM";
     
     if(h == 0){
