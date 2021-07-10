@@ -1,0 +1,19 @@
+{
+  "name": "weathersite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "geolocation": "^0.2.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.9",
+    "openweather-apis": "^4.4.1"
+  }
+}
