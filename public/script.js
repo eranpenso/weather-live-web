@@ -3,7 +3,6 @@ getLocation()
 window.alert('THE CURRENT WEATHER SHOWS YOUR CURRENT LOCATION, YOU CAN SEARCH FOR ANOTHER CITITES IN THE SEARCH BOX')
 async function getCityData(cityname)
 {
-    console.log('fetching')
     let response=await fetch('/countryweather?cityname='+cityname);
     let data = await response.json();
     if(data.cod != 200){
@@ -63,7 +62,6 @@ function UpdateUI(data)
 }
 function showTime(time_zone){
     let d = new Date(new Date().toLocaleString("en-US", {timeZone: time_zone}));   
-    console.log(d)
     var h = d.getHours() 
     var m = d.getMinutes() 
     var s = d.getSeconds()
@@ -89,7 +87,6 @@ function showTime(time_zone){
 
 function searchButtonClicked()
 {
-    console.log('button pressed')
     var data = document.getElementById("search_textbox").value;    
     console.log(data)
     getCityData(data)    

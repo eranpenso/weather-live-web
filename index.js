@@ -24,9 +24,7 @@ app.get('/countryweather',async function (req, res) {
 app.get('/currentweather',async function (req, res) {
   let jscontract;
   if(req.query.cityname!=null)
-    console.log(`https://api.openweathermap.org/data/2.5/onecall?lat=${req.query.lat}&lon=${req.query.lon}&units=metric&appid=df7b1130b51853c79a3c341a962c6461`)
-    jscontract= await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${req.query.lat}&lon=${req.query.lon}&units=metric&appid=df7b1130b51853c79a3c341a962c6461`)
+    jscontract= await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${req.query.lat}&lon=${req.query.lon}&units=metric&appid=${process.env.API_TOKEN}`)
   const dataresponse = await jscontract.json();
-  //console.log(dataresponse);
   res.json(dataresponse);
 })
